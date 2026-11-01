@@ -944,6 +944,7 @@ h1{font-size:36px;line-height:1.15;margin:0 0 14px}.lead{font-size:21px;margin:0
 .ctas{display:grid}.price{font-size:22px;font-weight:800;margin:6px 0 2px;color:#0b4f4a}.note{font-size:18px;color:#3d4a53;margin:4px 0 0}
 .hint{background:#fff;border-left:6px solid #0f766e;border-radius:12px;padding:14px 16px;margin:16px 0 0;font-size:19px}
 .trust{display:flex;flex-wrap:wrap;gap:10px;padding:18px 0;margin:0;list-style:none}.trust li{background:#e6f4f2;color:#0b4f4a;padding:10px 14px;border-radius:999px;font-weight:700;font-size:18px}
+.qf label{display:block;font-weight:700;margin:14px 0 6px}.qf input,.qf textarea{width:100%;box-sizing:border-box;font-size:18px;padding:12px;border:1px solid #bbb;border-radius:10px}.qf textarea{min-height:120px}.qf button{width:100%;border:0;cursor:pointer;margin-top:18px}.qf .small{font-size:15px;color:#555}
 section{padding:40px 0}h2{font-size:30px;margin:0 0 18px}
 .grid{display:grid;gap:14px}.card{background:#f4f6f7;padding:20px;border-radius:16px}.card h3{margin:0 0 6px;font-size:22px}.card p{margin:0;color:#3d4a53;font-size:19px}
 .step b{display:inline-flex;width:44px;height:44px;border-radius:50%;background:#0f766e;color:#fff;align-items:center;justify-content:center;margin-bottom:8px;font-size:22px}
@@ -965,7 +966,7 @@ a:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
 <div class="hero"><div class="w">
 <h1>Damaged plaster, water-stained ceiling or a wall to change? Plaster work done properly.</h1>
 <figure class="heroimg"><img src="assets/nikolay-sanding-bulkhead.jpg" width="900" height="1200" fetchpriority="high" alt="Nick sanding a plaster bulkhead in a respirator, ready for paint"><figcaption>Nick sanding a bulkhead, ready for paint.</figcaption></figure>
-<div class="ctas"><a class="btn p" href="tel:+61405844343">&#9742; Call 0405 844 343</a><a class="btn s" href="sms:0405844343?&body=Hi%20Nick%2C%20can%20I%20get%20a%20quote%20for%20some%20plaster%20work%20please%3F%0ASuburb%3A%20%0AJob%3A%20%0APhotos%20attached.">&#128247; Text photos for a quote</a></div>
+<div class="ctas"><a class="btn p" href="tel:+61405844343">&#9742; Call 0405 844 343</a><a class="btn s" href="sms:0405844343?&body=Hi%20Nick%2C%20can%20I%20get%20a%20quote%20for%20some%20plaster%20work%20please%3F%0ASuburb%3A%20%0AJob%3A%20%0APhotos%20attached.">&#128247; Text photos for a quote</a><a class="btn s" href="#quote">&#9993; Send photos for a free quote</a></div>
 <p class="lead">Plaster repairs, water damage, ceiling resheeting, cornice, bulkheads, cavity sliding doors, media walls and non-load-bearing walls. Set and sanded smooth, ready for paint.</p>
 <p class="price">Small hole in a wall from $350, materials included.</p>
 <p class="note">Other jobs: free quote from photos. We can work on invoice for insurance and water damage jobs.</p>
@@ -973,6 +974,24 @@ a:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
 </div></div>
 <div class="w"><ul class="trust"><li>&#10003; Insured</li><li>&#10003; ABN 41 672 072 518</li><li>&#10003; ~15 years in construction</li><li>&#10003; Invoice for insurance jobs</li></ul></div>
 
+<section id="quote"><div class="w"><h2>Send photos for a free quote</h2>
+<p>Missed my call? Send the job here and Nick will get back to you, usually the same day.</p>
+<form class="qf" action="https://formsubmit.co/nprozorovskiy2020@gmail.com" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_subject" value="New quote request - Logan Plaster Repairs website">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://nickau2020.github.io/logan-plaster/#thanks">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<label for="qn">Your name</label><input id="qn" type="text" name="name" required autocomplete="name">
+<label for="qp">Phone</label><input id="qp" type="tel" name="phone" required autocomplete="tel" inputmode="tel">
+<label for="qs">Suburb</label><input id="qs" type="text" name="suburb" required>
+<label for="qd">What needs fixing?</label><textarea id="qd" name="job" required placeholder="e.g. hole in the wall about 20 cm, water stain on the ceiling"></textarea>
+<label for="qf">Photos (2-3 is perfect)</label><input id="qf" type="file" name="attachment" accept="image/*" multiple>
+<p class="small">Up to 10 MB of photos in total.</p>
+<button class="btn p" type="submit">Send to Nick</button>
+</form>
+<p id="thanks" class="small">Sent it? Thanks, Nick will reply soon. Urgent? Call 0405 844 343.</p>
+<script>document.getElementById('qf').addEventListener('change',function(){var t=0;for(var f of this.files)t+=f.size;if(t>10*1024*1024){alert('Photos are over 10 MB in total. Please pick fewer photos.');this.value='';}});</script>
+</div></section>
 <section id="how"><div class="w"><h2>How it works</h2><div class="grid">
 <div class="card step"><b>1</b><h3>Send photos</h3><p>Text photos, your suburb and a short description to 0405 844 343.</p></div>
 <div class="card step"><b>2</b><h3>Get a price</h3><p>You get a price back by text, usually the same evening.</p></div>
